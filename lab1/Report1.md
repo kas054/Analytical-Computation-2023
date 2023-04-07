@@ -70,6 +70,7 @@ FromZhToAnf[function_] :=
 <img width="806" alt="image" src="https://user-images.githubusercontent.com/80067024/230645974-5f42c351-6a39-4575-b2de-d3fb7af86cfa.png">
 
 ### 2. из таблицы истинности в многочлен Жегалкина и АНФ
+Из таблицы истинности в многочлен Жегалкина: 
 ```
 FromTtToZh[func_] := Module[{f, variables, x, i},
   variables = Array[x, Log[2, Length[func]]];
@@ -78,3 +79,5 @@ FromTtToZh[func_] := Module[{f, variables, x, i},
   Return[f]
   ]
   ```
+#### Пример использвоания:
+<img width="1099" alt="image" src="https://user-images.githubusercontent.com/80067024/230646332-2981bf63-17f2-4cb0-92b0-16ade9c5b19c.png">
