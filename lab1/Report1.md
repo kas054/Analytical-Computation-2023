@@ -38,6 +38,7 @@ LinearBf[n_] := Module[{function = 0, table, coef, variables},
 
 ## 2. Разработка способов и реализация средствами САВ "Mathematica"  преобразований представлений булевых функций 
 ### 1. из многочлена Жегалкина в АНФ
+АНФ - коэфициенты конъюнкций многочлена Жегалкина
 ```
 FromZhToAnf[function_] := 
  Module[{variables = BooleanVariables[function], anf, size},
@@ -68,3 +69,12 @@ FromZhToAnf[function_] :=
 #### Пример использвоания:
 <img width="806" alt="image" src="https://user-images.githubusercontent.com/80067024/230645974-5f42c351-6a39-4575-b2de-d3fb7af86cfa.png">
 
+### 2. из таблицы истинности в многочлен Жегалкина и АНФ
+```
+FromTtToZh[func_] := Module[{f, variables, x, i},
+  variables = Array[x, Log[2, Length[func]]];
+  f = BooleanFunction[func,  variables];
+  f = BooleanConvert[f, "ANF"];
+  Return[f]
+  ]
+  ```
