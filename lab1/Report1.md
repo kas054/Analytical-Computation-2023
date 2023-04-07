@@ -15,6 +15,6 @@ GenerateTableWeight[n_, weight_] := Module[{table},
   Return[table]
   ]
 ```
-#### Пример использования 
+#### Пример использования:
 <img width="261" alt="image" src="https://user-images.githubusercontent.com/80067024/230645188-56d9fbbc-10cb-4bca-9b4d-7543e468a26a.png">
 
