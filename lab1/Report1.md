@@ -81,3 +81,35 @@ FromTtToZh[func_] := Module[{f, variables, x, i},
   ```
 #### Пример использвоания:
 <img width="1099" alt="image" src="https://user-images.githubusercontent.com/80067024/230646332-2981bf63-17f2-4cb0-92b0-16ade9c5b19c.png">
+Вспомогательная функция: 
+```
+XorVectors[v1_, v2_] := Module[{result },
+  size = Length[v1];
+  result = Table[0, size];
+  For[i = 1, i <= size, i ++,
+   result = ReplacePart[result, BitXor[v1[[i]], v2[[i]]], i]
+   ];
+  Return[result]
+  ]
+```
+Из таблицы истинности в АНФ:
+```
+FromTTToAnf[vector_] := Module[{mat = {{1, 0}, {1, 1}}, a1, a2, mul},
+  If[Length[vector] == 2,
+   mul = Dot[mat, vector];
+   For[i = 1, i <= 2, i ++,
+    If[mul[[i]] == 2, mul = ReplacePart[mul, 0, i]]
+    ];
+   Return[mul],
+   a1 = FromTTToAnf[Take[vector, {1, Length[vector] / 2}]];
+   a2 = XorVectors[a1, 
+     FromTTToAnf[
+      Take[vector, {Length[vector] / 2 + 1, Length[vector]}]]];
+   Return[Join[a1, a2]]
+   ]
+  ]
+```
+#### Пример использования:
+<img width="393" alt="image" src="https://user-images.githubusercontent.com/80067024/230646693-debfff35-d9fa-45f6-8baa-c5e3c909e8b4.png">
+
+
