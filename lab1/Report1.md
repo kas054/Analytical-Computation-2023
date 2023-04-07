@@ -70,6 +70,12 @@ FromZhToAnf[function_] :=
 <img width="806" alt="image" src="https://user-images.githubusercontent.com/80067024/230645974-5f42c351-6a39-4575-b2de-d3fb7af86cfa.png">
 
 ### 2. из таблицы истинности в многочлен Жегалкина и АНФ
+Преобразование из многочлена в таблицу:
+
+$
+\displaystyle f(x_1, ..., x_n) = 
+$
+
 Из таблицы истинности в многочлен Жегалкина: 
 ```
 FromTtToZh[func_] := Module[{f, variables, x, i},
