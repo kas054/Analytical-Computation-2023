@@ -96,22 +96,16 @@ XorVectors[v1_, v2_] := Module[{result },
   ]
 ```
 <br />
-Из таблицы истинности в АНФ:
-<br />
+Вспомогательная функция: <br />
+
 ```
-FromTTToAnf[vector_] := Module[{mat = {{1, 0}, {1, 1}}, a1, a2, mul},
-  If[Length[vector] == 2,
-   mul = Dot[mat, vector];
-   For[i = 1, i <= 2, i ++,
-    If[mul[[i]] == 2, mul = ReplacePart[mul, 0, i]]
-    ];
-   Return[mul],
-   a1 = FromTTToAnf[Take[vector, {1, Length[vector] / 2}]];
-   a2 = XorVectors[a1, 
-     FromTTToAnf[
-      Take[vector, {Length[vector] / 2 + 1, Length[vector]}]]];
-   Return[Join[a1, a2]]
-   ]
+XorVectors[v1_, v2_] := Module[{result },
+  size = Length[v1];
+  result = Table[0, size];
+  For[i = 1, i <= size, i ++,
+   result = ReplacePart[result, BitXor[v1[[i]], v2[[i]]], i]
+   ];
+  Return[result]
   ]
 ```
 <br />
