@@ -35,3 +35,36 @@ LinearBf[n_] := Module[{function = 0, table, coef, variables},
 ```
 #### Пример использования:
 <img width="309" alt="image" src="https://user-images.githubusercontent.com/80067024/230645497-d5960471-db98-423a-92e0-ead26722ed25.png">
+
+## 2. Разработка способов и реализация средствами САВ "Mathematica"  преобразований представлений булевых функций 
+### 1. из многочлена Жегалкина в АНФ
+```
+FromZhToAnf[function_] := 
+ Module[{variables = BooleanVariables[function], anf, size},
+  If[Length[variables[[-1]][[-1]]] == 0,
+   size = variables[[-1]][[-1]],
+   size = variables[[-1]][[-1]][[-1]]
+   ];
+  Print[function];
+  anf = Table[0, 2^size];
+  For[i = 1, i <= Length[function], i ++,
+   position = 1;
+   mon = function[[i]];
+   If [Length[mon] == 0, 
+    anf = ReplacePart[anf, 1, position],
+    If[Length[mon] == 1, 
+     position = position + 2 ^(size - mon[[1]]);
+     anf = ReplacePart[anf, 1, position],
+     For[j = 1, j <= Length[mon], j ++,
+      position = position + 2 ^ ( size - mon[[j]][[1]])
+      ];
+     anf = ReplacePart[anf, 1, position]
+     ]
+    ]
+   ];
+  Return[anf]
+  ]
+```
+#### Пример использвоания:
+<img width="806" alt="image" src="https://user-images.githubusercontent.com/80067024/230645974-5f42c351-6a39-4575-b2de-d3fb7af86cfa.png">
+
