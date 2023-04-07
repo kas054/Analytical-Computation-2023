@@ -80,9 +80,10 @@ FromTtToZh[func_] := Module[{f, variables, x, i},
   ]
   ```
 #### Пример использвоания:
+<br />
 <img width="1099" alt="image" src="https://user-images.githubusercontent.com/80067024/230646332-2981bf63-17f2-4cb0-92b0-16ade9c5b19c.png">
-<>
-Вспомогательная функция: 
+<br />
+Вспомогательная функция: <br />
 ```
 XorVectors[v1_, v2_] := Module[{result },
   size = Length[v1];
@@ -93,7 +94,9 @@ XorVectors[v1_, v2_] := Module[{result },
   Return[result]
   ]
 ```
+<br />
 Из таблицы истинности в АНФ:
+<br />
 ```
 FromTTToAnf[vector_] := Module[{mat = {{1, 0}, {1, 1}}, a1, a2, mul},
   If[Length[vector] == 2,
@@ -110,7 +113,7 @@ FromTTToAnf[vector_] := Module[{mat = {{1, 0}, {1, 1}}, a1, a2, mul},
    ]
   ]
 ```
-
+<br />
 #### Пример использования:
 <img width="393" alt="image" src="https://user-images.githubusercontent.com/80067024/230646693-debfff35-d9fa-45f6-8baa-c5e3c909e8b4.png">
 
