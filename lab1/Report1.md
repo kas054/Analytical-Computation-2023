@@ -84,6 +84,7 @@ FromTtToZh[func_] := Module[{f, variables, x, i},
 <img width="1099" alt="image" src="https://user-images.githubusercontent.com/80067024/230646332-2981bf63-17f2-4cb0-92b0-16ade9c5b19c.png">
 <br />
 Вспомогательная функция: <br />
+
 ```
 XorVectors[v1_, v2_] := Module[{result },
   size = Length[v1];
