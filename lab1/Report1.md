@@ -66,7 +66,7 @@ FromZhToAnf[function_] :=
   Return[anf]
   ]
 ```
-#### Пример использвоания:
+#### Пример использвания:
 <img width="806" alt="image" src="https://user-images.githubusercontent.com/80067024/230645974-5f42c351-6a39-4575-b2de-d3fb7af86cfa.png">
 
 ### 2. из таблицы истинности в многочлен Жегалкина и АНФ
@@ -116,7 +116,7 @@ FromTTToAnf[vector_] := Module[{mat = {{1, 0}, {1, 1}}, a1, a2, mul},
 
 ```
 <br />
-#### Пример использвоания:
+
 <img width="393" alt="image" src="https://user-images.githubusercontent.com/80067024/230646693-debfff35-d9fa-45f6-8baa-c5e3c909e8b4.png">
 
 
