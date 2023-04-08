@@ -71,13 +71,7 @@ FromZhToAnf[function_] :=
 
 ### 2. из таблицы истинности в многочлен Жегалкина и АНФ
 Преобразование из многочлена в таблицу: <br />
-
-$$
-\displaystyle f(x_1, ...,x_n) = \sum_{ \alpha \leq x } a_f(\alpha_1,... ,\alpha_n) =  \begin{cases}
-1//
-2
-\end{cases}
-$$
+<img width="711" alt="image" src="https://user-images.githubusercontent.com/80067024/230721689-925682ea-d957-4ebc-814b-920dc2a1fc0b.png">
 <br />
 
 Из таблицы истинности в многочлен Жегалкина: 
