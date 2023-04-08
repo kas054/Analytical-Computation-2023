@@ -241,3 +241,19 @@ Calculate[vector_, cur_, size_] :=
   Return[answer ];
   ]
 ```
+
+```
+FromWalshToTt[vector_] := Module[{size, func, cur},
+  size = Log[2, Length[vector]];
+  func = Table[0, 2^size];
+  For[i = 1; i <= 2^size, i ++,
+   cur =  BaseTranslator[i, 10, 2, BTForm -> IntegerDigits];
+   While[Length[cur] < size,
+    cur = Insert[cur, 1, 0];
+    ];
+   ReplacePart[func, Calculate[vector, cur, size], i];
+   ];
+  Return[func];
+  ]
+```
+#### Пример использования:
