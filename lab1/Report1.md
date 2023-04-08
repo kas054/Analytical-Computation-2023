@@ -258,3 +258,24 @@ FromWalshToTt[vector_] := Module[{size, func, cur},
 ```
 #### Пример использования:
 <img width="389" alt="image" src="https://user-images.githubusercontent.com/80067024/230724035-511038ed-c4dd-4bba-a57e-221f7a3dde76.png">
+
+## 3. Разработка способов и реализация средствами САВ "Mathematica"  инструментов исследования булевых вектор-функций.
+
+### 3.1 Построение вектор-функций для заданных размерностей ходных и выходных векторов:
+1) из разрядных функций;
+```
+FFunction[m_, n_, functions_] := Module[{output},
+  output = Boole[Table[BooleanTable[functions[[i]]], {i, m}]];
+  Return[output];
+  ]
+```
+2) (псевдо)случайным образом
+```
+SFunction[m_, n_] := Module[{output, i},
+  output = 
+   Boole[Table[
+     BooleanTable[BooleanFunction[RandomInteger[100], n]], {i, m}]];
+  Return[output]
+  ]
+```
+Пример использования:
