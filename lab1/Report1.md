@@ -223,4 +223,21 @@ Options[BaseTranslator] = {BTForm -> BaseForm};
 BaseTranslator[number_, base1_, base2_, 
   OptionsPattern[]] := (OptionValue@BTForm)[
   FromDigits[ToString[number], base1], base2]
+  
+  
+Calculate[vector_, cur_, size_] := 
+ Module[{tmp, answer = vector[[1]], eq  = 0},
+  For[i = 2, i <= Length[vector], i ++,
+   tmp = BaseTranslator[i, 10, 2, BTForm -> IntegerDigits];
+   While[Length[tmp] < Length[size],
+    tmp = Insert[tmp, 1, 0];
+    ];
+   For[j = 1, j <= Length[tmp], j ++,
+    If [tmp[[i]] == 1, eq = BitXor[eq, cur[[i]]]];
+    ];
+   If[vector[[i]] != 0, 
+    answer += Power[vector[[i]], eq]];
+   ];
+  Return[answer ];
+  ]
 ```
