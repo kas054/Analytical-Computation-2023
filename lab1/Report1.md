@@ -280,3 +280,4 @@ SFunction[m_, n_] := Module[{output, i},
 ```
 #### Пример использования:
 <img width="1264" alt="image" src="https://user-images.githubusercontent.com/80067024/230724236-bfda4df4-37eb-40a8-9a62-47f68a7e3cce.png">
+### 3.2 Исследование разрядных функций вектор-функции.
