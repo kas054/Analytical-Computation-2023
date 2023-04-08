@@ -280,14 +280,22 @@ SFunction[m_, n_] := Module[{output, i},
 ```
 #### Пример использования:
 <img width="1264" alt="image" src="https://user-images.githubusercontent.com/80067024/230724236-bfda4df4-37eb-40a8-9a62-47f68a7e3cce.png">
+
+
 ### 3.2 Исследование разрядных функций вектор-функции.
+
+
 1) Получение разрядных функций вектор-функции, заданной таблично, где входные и выходные вектора упакованы в (целые неотрицательные) числа.
+
 ```
+
 GetFunction[m_, n_, func_] := Module[{i},
   For[i = 1, i <= m, i ++,
     Print[func[[i]]];
     ];
   ]
+  
 ```
+
 #### Пример использлвания:
 <img width="231" alt="image" src="https://user-images.githubusercontent.com/80067024/230724331-2d44123e-ad0a-41d8-93b5-9902bf27bcd6.png">
