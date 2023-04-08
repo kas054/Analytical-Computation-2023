@@ -278,4 +278,5 @@ SFunction[m_, n_] := Module[{output, i},
   Return[output]
   ]
 ```
-Пример использования:
+#### Пример использования:
+<img width="1253" alt="image" src="https://user-images.githubusercontent.com/80067024/230724186-70e4637d-3ffd-4937-8ebb-0c4c0e6f146f.png">
