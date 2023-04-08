@@ -161,7 +161,9 @@ ChangeVector[vector_] := Module[{result},
   ]
 ```
 Коэффициенты Адамара-Уолша:
+
 ```
+
 WalshHadamard[vector_] := 
  Module[{mat = {{1, 1}, {1, -1}}, a1, a2, mul},
   If[Length[vector] == 2,
@@ -173,7 +175,9 @@ WalshHadamard[vector_] :=
    Return[Join[a1 + a2, a1 - a2]]
    ]
   ]
+  
 ```
+
 #### Пример использования:
 <img width="371" alt="image" src="https://user-images.githubusercontent.com/80067024/230722523-3048692c-8c57-4bfc-a10c-3b801b0d45f2.png">
 
