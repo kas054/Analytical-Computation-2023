@@ -393,3 +393,5 @@ LinearAnalog[func_] := Module[{prob, size, vect, variables},
    ]
   ]
 ```
+#### Пример использолвания: 
+<img width="742" alt="image" src="https://user-images.githubusercontent.com/80067024/230724933-c611c49e-f5a6-4953-8caf-b2d77bccc82f.png">
