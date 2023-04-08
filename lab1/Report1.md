@@ -213,3 +213,5 @@ Fourier1[vector_]  := Module[{fwhd, fourier, n},
 ```
 #### Пример использования:
 <img width="331" alt="image" src="https://user-images.githubusercontent.com/80067024/230722530-fd613172-5b77-4f6c-80a4-ec64796cafb8.png">
+
+### 6) получение таблицы истинности по спектральным коэффициентам </br>
