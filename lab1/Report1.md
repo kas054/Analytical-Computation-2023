@@ -153,14 +153,15 @@ FromTTToP[vector_] := Module[{mat = {{1, 0}, {-1, 1}}, a1, a2, mul},
 #### Пример использования:
 <img width="354" alt="image" src="https://user-images.githubusercontent.com/80067024/230722065-aae82728-6419-4c79-88da-9d7f8f69ecc1.png">
 ### 5. вычисление списка спектральных коэффициентов (Фурье, Адамара-Уолша) по таблице истинности
-Вспомогательная функция:
+<br />
+Вспомогательная функция: <br />
 ```
 ChangeVector[vector_] := Module[{result},
   result = Table[1 - 2*vector[[i]], {i, Length[vector]}];
   Return[result]
   ]
 ```
-Коэффициенты Адамара-Уолша:
+Коэффициенты Адамара-Уолша: <br />
 
 ```
 
