@@ -152,3 +152,43 @@ FromTTToP[vector_] := Module[{mat = {{1, 0}, {-1, 1}}, a1, a2, mul},
 
 #### Пример использования:
 <img width="354" alt="image" src="https://user-images.githubusercontent.com/80067024/230722065-aae82728-6419-4c79-88da-9d7f8f69ecc1.png">
+### 5. вычисление списка спектральных коэффициентов (Фурье, Адамара-Уолша) по таблице истинности
+Вспомогательная функция:
+```
+ChangeVector[vector_] := Module[{result},
+  result = Table[1 - 2*vector[[i]], {i, Length[vector]}];
+  Return[result]
+  ]
+```
+Коэффициенты Адамара-Уолша:
+```
+WalshHadamard[vector_] := 
+ Module[{mat = {{1, 1}, {1, -1}}, a1, a2, mul},
+  If[Length[vector] == 2,
+   mul = Dot[mat, vector];
+   Return[mul],
+   a1 = WalshHadamard[Take[vector, {1, Length[vector] / 2}]];
+   a2 = WalshHadamard[
+     Take[vector, {Length[vector] / 2 + 1, Length[vector]}]];
+   Return[Join[a1 + a2, a1 - a2]]
+   ]
+  ]
+```
+#### Пример использования:
+<img width="371" alt="image" src="https://user-images.githubusercontent.com/80067024/230722523-3048692c-8c57-4bfc-a10c-3b801b0d45f2.png">
+
+
+Коэффициенты Фурье:
+```
+Fourier1[vector_]  := Module[{fwhd, fourier, n},
+  n = Log[2, Length[vector]];
+  fwhd = WalshHadamard[vector];
+  fourier = {2^n - 2*fwhd[[1]]};
+  For[ i = 2, i <= 2^n, i++,
+   fourier = Append[fourier, -2*fwhd[[i]]];
+   ];
+  Return[fourier]
+  ]
+```
+#### Пример использования:
+<img width="331" alt="image" src="https://user-images.githubusercontent.com/80067024/230722530-fd613172-5b77-4f6c-80a4-ec64796cafb8.png">
