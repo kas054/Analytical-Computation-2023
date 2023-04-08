@@ -333,6 +333,20 @@ GetMon[func_] := Module[{ i},
   
 ```
 #### Пример использования:
-<img width="229" alt="image" src="https://user-images.githubusercontent.com/80067024/230724516-4d977999-95ff-4591-9a20-158649502dff.png">
+<img width="226" alt="image" src="https://user-images.githubusercontent.com/80067024/230724561-11d8906b-652e-440d-87fd-9ef794d7d6ae.png">
 
+-	число мономов во всех многочленах Жегалкина разрядных функциях (т.е. мощность объединения множеств мономов многочленов Жегалкина разрядных функций);
+
+```
+
+GetTotal[func_] := Module[{ i, sum = 0},
+  m = Length[func];
+  For[i = 1, i <= m, i ++,
+   sum += Total[FromTTToAnf[func[[i]]]];
+   ];
+  Print[sum];
+  ]
+```
+#### Пример использования:
+<img width="160" alt="image" src="https://user-images.githubusercontent.com/80067024/230724613-c28fe2ec-839b-4fc0-b172-8e531e780fac.png">
 
