@@ -1,7 +1,7 @@
 ## 1. Построение в виде таблицы истинности 
-$\displaystyle f(x_1, ...,x_n) = \sum_{ \alpha \leq x } a_f(\alpha_1,... ,\alpha_n)=\begin{cases}
-\displaystyle\sum_{(\alpha_2, .., \alpha_n) \leq (x_2, ..., x_n)}a_f (0, \alpha_2,...,\alpha_n) \space, x_1 = 0 \\
-\displaystyle\sum_{(\alpha_2, .., \alpha_n) \leq (x_2, ..., x_n)} a_f (0, \alpha_2,...,\alpha_n) + \displaystyle\sum_{(\alpha_2, .., \alpha_n) \leq (x_2, ..., x_n)} a_f (1, \alpha_2,...,\alpha_n), x_1 = 1
+$\displaystyle f(x_1, ...,x_n) = \sum_{ \alpha \leq x } a_f(\alpha_1,... ,\alpha_n)= \begin{cases}
+\displaystyle \sum_{(\alpha_2, .., \alpha_n) \leq (x_2, ..., x_n)}a_f (0, \alpha_2,...,\alpha_n) \space, x_1 = 0 \\
+\displaystyle \sum_{(\alpha_2, .., \alpha_n) \leq (x_2, ..., x_n)} a_f (0, \alpha_2,...,\alpha_n) + \displaystyle\sum_{(\alpha_2, .., \alpha_n) \leq (x_2, ..., x_n)} a_f (1, \alpha_2,...,\alpha_n), x_1 = 1
 \end{cases} $
 
 ### 1. (псевдо)случайной булевой функции от заданного числа переменных 
