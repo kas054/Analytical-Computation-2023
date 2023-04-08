@@ -72,7 +72,9 @@ FromZhToAnf[function_] :=
 ### 2. из таблицы истинности в многочлен Жегалкина и АНФ
 Преобразование из многочлена в таблицу: <br />
 <img width="711" alt="image" src="https://user-images.githubusercontent.com/80067024/230721689-925682ea-d957-4ebc-814b-920dc2a1fc0b.png">
+ <br />
 Преобразование из тиблицы в вектор коэффициентов $a_f$
+ <br />
 <img width="760" alt="image" src="https://user-images.githubusercontent.com/80067024/230722338-2ab4e9b2-2f78-4bb8-bdbf-286f71f3baf0.png">
 
 <br />
