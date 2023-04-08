@@ -257,3 +257,4 @@ FromWalshToTt[vector_] := Module[{size, func, cur},
   ]
 ```
 #### Пример использования:
+<img width="419" alt="image" src="https://user-images.githubusercontent.com/80067024/230723986-aa3761a9-a5eb-495b-a1b2-d400c6c71a1e.png">
