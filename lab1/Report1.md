@@ -299,3 +299,28 @@ GetFunction[m_, n_, func_] := Module[{i},
 
 #### Пример использлвания:
 <img width="231" alt="image" src="https://user-images.githubusercontent.com/80067024/230724331-2d44123e-ad0a-41d8-93b5-9902bf27bcd6.png">
+2)Получение следующих характеристик разрядных функций:
+-	вес;
+Количество единиц в таблице истинности разрядной функции
+```
+WeightF[func_] := Module[{i},
+  m = Length[func];
+  For[i = 1, i <= m, i ++,
+   Print[Total[func[[i]]]]
+   ]
+  ]
+```
+#### Пример использования:
+
+-	число мономов для многочлена Жегалкина каждой функции;
+Количество конъюнкций, входящих в многочлен Жегалкина
+```
+GetMon[func_] := Module[{ i},
+  m = Length[func];
+  For[i = 1, i <= m, i ++,
+   Print[FromTTToAnf[func[[i]]]];
+   Print[Total[FromTTToAnf[func[[i]]]]];
+   ]
+  ]
+```
+#### Пример использования:
