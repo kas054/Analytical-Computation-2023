@@ -122,4 +122,13 @@ FromTTToAnf[vector_] := Module[{mat = {{1, 0}, {1, 1}}, a1, a2, mul},
 #### Пример использования:
 <img width="393" alt="image" src="https://user-images.githubusercontent.com/80067024/230646693-debfff35-d9fa-45f6-8baa-c5e3c909e8b4.png">
 
+## 3. из многочлена Жегалкина в таблицу истинности
+```
+FromZhToTt[function_] := Module[{tmp},
+  table = BooleanTable[BooleanConvert[function, "BFF"]];
+  Return[Boole[table]];
+  ]
+```
+#### Пример использования:
+<img width="262" alt="image" src="https://user-images.githubusercontent.com/80067024/230722016-349e74d5-1be4-4e2b-b06b-5b82aa646e3a.png">
 
