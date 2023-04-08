@@ -351,3 +351,43 @@ GetTotal[func_] := Module[{ i, sum = 0},
 <img width="160" alt="image" src="https://user-images.githubusercontent.com/80067024/230724613-c28fe2ec-839b-4fc0-b172-8e531e780fac.png">
 
 -	коэффициенты Фурье и Адамара-Уолша, соответственно список  линейных аналогов и соответствующих вероятностей совпадения разрядной функции с линейной (аффинной);
+
+Впомогательная функциия:
+
+```
+NormalizeSN[normnum_, decnumber_] := 
+ Module[{newarr, i, binarr}, 
+  binarr = BaseTranslator[decnumber, 10, 2, BTForm -> IntegerDigits];
+  newarr := binarr;
+  For[i = Length[binarr], i < normnum, i++, 
+   newarr = Insert[newarr, 0, 1]];
+  Return[newarr];]
+
+```
+```
+P[func_] := Module[{vector, coef, p, n, count, tmp, i},
+  n  = Length[func[[1]]];
+  count = Log[2, n];
+  p = Table[0, {i, count}];
+  For[i = 1, i <= Length[func], i ++,
+   vector = func[[i]];
+   coef = Fourier1[vector];
+   p = ReplacePart[p, Table[1/2 + coef[[i]]/ 2^(count + 1), {i, n}], 
+     i];
+   ];
+  Return[p];
+  ]
+
+LinearAnalog[func_] := Module[{prob, size, vect, variables},
+  size = Log[2, Length[func[[1]]]];
+  prob = P[func];
+  variables = Array[{x}, size];
+  For[j = 1, j <= Length[func], j ++, 
+   For[i = 0, i <= Length[func[[1]]] - 1, i ++,
+    vect = NormalizeSN[size, i];
+    Print[Dot[vect, variables]];
+    Print[prob[[j]][[i + 1]]]
+    ]
+   ]
+  ]
+```
