@@ -351,7 +351,7 @@ GetTotal[func_] := Module[{ i, sum = 0},
 <img width="160" alt="image" src="https://user-images.githubusercontent.com/80067024/230724613-c28fe2ec-839b-4fc0-b172-8e531e780fac.png">
 
 -	коэффициенты Фурье и Адамара-Уолша, соответственно список  линейных аналогов и соответствующих вероятностей совпадения разрядной функции с линейной (аффинной);
--	
+
 $P(f(x) = \alpha^Tx) = \frac {1}{2} - \frac {\tilde f(\alpha)}{2^n}, \alpha \neq 0$
 
 Впомогательная функциия:
