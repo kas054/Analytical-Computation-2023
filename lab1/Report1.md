@@ -395,3 +395,45 @@ LinearAnalog[func_] := Module[{prob, size, vect, variables},
 ```
 #### Пример использолвания (приведена часть вывода функции): 
 <img width="742" alt="image" src="https://user-images.githubusercontent.com/80067024/230724933-c611c49e-f5a6-4953-8caf-b2d77bccc82f.png">
+
+-	действительный многочлен, его степень и число мономов, а также частные производные в точке (0.5,...,0.5)по каждой переменной.
+
+```
+Polynoms[func_] := Module[{polynom},
+  polynom = Table[FromTTToP[func[[i]]], {i, Length[func]}];
+  Return[polynom];
+  ]
+
+CountOfMonoms[func_] := Module[{polynoms, list, count},
+  polynoms = Polynoms[func];
+  Print[polynoms];
+  list = Array[0, Length[func]];
+  For[i = 1, i <= Length[polynoms], i ++,
+   count = 0;
+   For[j = 1, j <= Length[polynoms[[i]]], j ++,
+    If[polynoms[[i]][[j]] != 0, count += 1]
+    ];
+   list = ReplacePart[list, count, i];
+   ];
+  Return[list]
+  ]
+
+Deg[polynom_] := Module[{},
+  For[i = Length[polynom], i > 0, i--, 
+   Print[polynom[[i]]];
+   If[polynom[[i]] != 0, 
+    Return[Total[
+      BaseTranslator[i - 1, 10, 2, BTForm -> IntegerDigits]]]]
+   ]
+  ]
+  
+  Derivative[polynom_] := Module[{answer = 0, cur},
+  For[i = 1, i <= Length[polynom], i ++,
+   cur = Total[BaseTranslator[i , 10, 2, BTForm -> IntegerDigits]];
+   answer += polynom[[i]]* (1/2)^cur;
+   ];
+  Return[answer]
+  ]
+```
+#### Пример использования
+<img width="721" alt="image" src="https://user-images.githubusercontent.com/80067024/230725128-414ee617-af11-456b-bd16-a0296bdd9857.png">
