@@ -192,10 +192,12 @@ WalshHadamard[vector_] :=
 #### Пример использования:
 <img width="371" alt="image" src="https://user-images.githubusercontent.com/80067024/230722523-3048692c-8c57-4bfc-a10c-3b801b0d45f2.png">
 
-<img width="692" alt="image" src="https://user-images.githubusercontent.com/80067024/230723624-a9751dfa-4ac1-488e-a4ae-9791e5d9d6dc.png">
-
 
 Коэффициенты Фурье:
+
+<img width="692" alt="image" src="https://user-images.githubusercontent.com/80067024/230723647-fa6f5899-69bb-4f69-8324-1542e643fb77.png">
+
+
 ```
 Fourier1[vector_]  := Module[{fwhd, fourier, n},
   n = Log[2, Length[vector]];
