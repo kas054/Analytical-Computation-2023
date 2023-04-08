@@ -192,6 +192,8 @@ WalshHadamard[vector_] :=
 #### Пример использования:
 <img width="371" alt="image" src="https://user-images.githubusercontent.com/80067024/230722523-3048692c-8c57-4bfc-a10c-3b801b0d45f2.png">
 
+<img width="692" alt="image" src="https://user-images.githubusercontent.com/80067024/230723624-a9751dfa-4ac1-488e-a4ae-9791e5d9d6dc.png">
+
 
 Коэффициенты Фурье:
 ```
