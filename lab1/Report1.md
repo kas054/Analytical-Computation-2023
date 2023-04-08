@@ -70,13 +70,13 @@ FromZhToAnf[function_] :=
 <img width="806" alt="image" src="https://user-images.githubusercontent.com/80067024/230645974-5f42c351-6a39-4575-b2de-d3fb7af86cfa.png">
 
 ### 2. из таблицы истинности в многочлен Жегалкина и АНФ
-Преобразование из многочлена в таблицу:
+Преобразование из многочлена в таблицу: <br />
 
 $$\displaystyle f(x_1, ...,x_n) = \sum_{ \alpha \leq x } a_f(\alpha_1,... ,\alpha_n) =  \begin{cases}
 \displaystyle\sum_{(\alpha_2, .., \alpha_n) \leq (x_2, ..., x_n)}a_f (0, \alpha_2,...,\alpha_n) \space, x_1 = 0 \\
 
 \displaystyle\sum_{(\alpha_2, .., \alpha_n) \leq (x_2, ..., x_n)} a_f (0, \alpha_2,...,\alpha_n) + \displaystyle\sum_{(\alpha_2, .., \alpha_n) \leq (x_2, ..., x_n)} a_f (1, \alpha_2,...,\alpha_n), x_1 = 1
-\end{cases}$$
+\end{cases}$$ <br />
 
 Из таблицы истинности в многочлен Жегалкина: 
 ```
