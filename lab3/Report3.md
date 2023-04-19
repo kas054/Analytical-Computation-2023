@@ -32,6 +32,9 @@ p = 15487469, q = 15516719, u = 15502094, v = 14625
 
 ### Разложить числа ро-методом Полларда.
 
+Алгоритм:
+https://en.wikipedia.org/wiki/File:Pollard_rho_cycle.svg![image](https://user-images.githubusercontent.com/80067024/233162066-f8dc6ca5-ea0d-4fe2-ac9e-98cf771cd32d.png)
+
 
 ```
 G[x_, n_] := Module[{ans},
