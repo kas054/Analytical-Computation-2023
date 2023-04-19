@@ -34,7 +34,7 @@ p = 15487469, q = 15516719, u = 15502094, v = 14625
 
 Алгоритм:
 
-https://upload.wikimedia.org/wikipedia/commons/thumb/5/50/Pollard_rho_cycle.svg/1920px-Pollard_rho_cycle.svg.png![image]
+<img width="228" alt="image" src="https://user-images.githubusercontent.com/80067024/233162447-6afd6b55-dccb-40f5-ac95-9ab41f8e36d6.png">
 
 
 
