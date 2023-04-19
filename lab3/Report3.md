@@ -56,3 +56,4 @@ Pollard[num_] := Module[{x = 2, y = 2, d = 1, len = 0},
 ```
 
 <img width="347" alt="image" src="https://user-images.githubusercontent.com/80067024/233160943-18c5ae59-4dd3-4c81-ae38-13d2a413e2a3.png">
+p = 15485867, q = 15518449, длина последовательности: 3399
