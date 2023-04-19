@@ -17,6 +17,9 @@ Fermat1 (num_) := Module[{y , k = -1, s = Sqrt[num]},
 
 ```
 Пример использования (Вариант 1):
+
+
+
 <img width="385" alt="image" src="https://user-images.githubusercontent.com/80067024/233145022-1753db43-b9ea-49c6-8fb0-89bd1494a05c.png">
 
 p = 15485867, q = 15518449, u = 15502158, v = 16291
