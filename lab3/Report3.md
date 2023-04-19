@@ -31,3 +31,28 @@ p = 15485867, q = 15518449, u = 15502158, v = 16291
 p = 15487469, q = 15516719, u = 15502094, v = 14625
 
 ### Разложить числа ро-методом Полларда.
+
+
+```
+G[x_, n_] := Module[{ans},
+  ans = Mod[x^2 + 1, n];
+  Return[ans]
+  ]
+
+Pollard[num_] := Module[{x = 2, y = 2, d = 1, len = 0},
+  While[d == 1,
+   len += 1;
+   x = G[x, num];
+   Print[x];
+   y = G[G[y, num]];
+   Print[y];
+   d = GCD[Abs[x - y], num];
+   Print[d];
+   ];
+  If[d == n,
+   Return[False],
+    Return[{d, num / d, len}]]
+  ]
+```
+
+<img width="347" alt="image" src="https://user-images.githubusercontent.com/80067024/233160943-18c5ae59-4dd3-4c81-ae38-13d2a413e2a3.png">
